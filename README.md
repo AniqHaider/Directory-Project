@@ -8,4 +8,4 @@ How to run ->
 
 4- Open terminal and type "npm run dev" to run the project .
 
-Video link of project -> https://www.loom.com/share/2087fb5f3db642d6baf1eccea129173d?sid=e103f4ce-38f7-4b06-9081-5d2bd6b1c9fe
+Video link of project -> https://www.loom.com/share/fa4e49f7a8cb448b9e87aa4adbe3a3b5?sid=8ae1036b-fb9a-40bd-b5cc-1f4af2385b01
