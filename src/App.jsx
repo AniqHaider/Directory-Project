@@ -1,10 +1,15 @@
-import AppRoutes from "./utility/Routes";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import UserDetails from "./components/UserDetails";
+import UserPostsList from "./components/UserPostsList";
 
 const App = () => {
   return (
-    <>
-      <AppRoutes />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<UserPostsList />} />
+        <Route path="/user/:userId" element={<UserDetails />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

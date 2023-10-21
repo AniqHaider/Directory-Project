@@ -46,18 +46,18 @@ const UserDetails = () => {
 
   return (
     <>
-      <div className="relative p-12 bg-gray-100">
+      <div className="relative p-12 bg-gradient-to-r from-green-400 to-yellow-300">
         <div className="mb-10 sm:mb-2">
           <Time />
         </div>
         <div>
           {user ? (
             <div>
-              <h1 className="text-5xl font-bold underline underline-offset-8 mb-8 text-center">
+              <h1 className="text-5xl font-bold underline underline-offset-8 mb-8 md:my-8 text-center">
                 Profile Page
               </h1>
-              <section className="p-4 border-2 border-black rounded-lg bg-blue-200 cursor-pointer my-6">
-                <div className="flex justify-between flex-col sm:flex-row font-semibold gap-2">
+              <section className="p-4 border-2 border-black rounded-lg bg-blue-200 hover:bg-sky-400 cursor-pointer my-6">
+                <div className="flex justify-between flex-col sm:flex-row font-semibold gap-2 md:mb-10">
                   <span>Name: {user.name}</span>
                   <span>
                     Address: {user.address.street}, {user.address.suite},{" "}
@@ -82,16 +82,16 @@ const UserDetails = () => {
                 {posts.map((post) => (
                   <div
                     key={post.id}
-                    className="border border-black rounded-lg outline-4 p-4 cursor-pointer bg-blue-300 w-[100%] md:w-[32%]"
+                    className="border border-gray-500 rounded-lg md:rounded-full outline-4 p-4 cursor-pointer bg-blue-200 hover:bg-sky-400 w-[100%] md:w-[32%]"
                     onClick={() =>
                       openPostModal({ title: post.title, body: post.body })
                     }
                   >
                     <p className="mb-2 font-[600] uppercase text-center">
-                      {post.title.substring(0, 15)}...
+                      {post.title.substring(0, 25)}...
                     </p>
                     <p className="first-letter:capitalize text-center">
-                      {post.body.substring(0, 30)}...
+                      {post.body.substring(0, 45)}...
                     </p>
                   </div>
                 ))}
@@ -103,7 +103,7 @@ const UserDetails = () => {
                     onClick={closePostModal}
                   ></div>
                   <div className="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 p-10">
-                    <div className="bg-blue-300 border-2 border-black rounded-lg w-[300px] md:w-[500px] p-5 cursor-pointer">
+                    <div className="bg-blue-200 hover:bg-sky-400 border-2 border-black rounded-lg w-[300px] md:w-[500px] p-6 md:p-14 cursor-pointer">
                       <h2 className="mb-4 text-xl font-[600] uppercase text-center">
                         {selectedPost.title}
                       </h2>

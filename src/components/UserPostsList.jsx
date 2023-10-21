@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { getUsers, getPosts } from "../api/api"; 
+import { useEffect, useState } from "react";
+import { getUsers, getPosts } from "../api/api";
 import { Link } from "react-router-dom";
 
-function UserPostsList() {
+const UserPostsList = () => {
   const [userData, setUserData] = useState([]);
   const [users, setUsers] = useState([]);
 
@@ -59,13 +59,15 @@ function UserPostsList() {
   });
 
   return (
-    <div className="bg-gray-100 p-4">
-      <h1 className="text-5xl font-bold underline underline-offset-8 mb-10 text-center">DIRECTORY</h1>
+    <div className=" bg-gradient-to-r from-green-400 to-yellow-300 p-8">
+      <h1 className="text-5xl font-bold underline underline-offset-8 mb-10 text-center">
+        DIRECTORY
+      </h1>
       <ul>
         {combinedData.map((user) => (
           <li key={user.userId}>
             <Link to={`/user/${user.userId}`}>
-              <div className="flex justify-between p-4 my-4 mx-8 border-2 border-black rounded-lg bg-blue-200">
+              <div className="flex justify-between p-4 my-4 mx-8 border-2 border-black rounded-lg bg-blue-200 hover:bg-sky-400">
                 <span>Name: {user.userName}</span>
                 <span>Posts: {user.postCount}</span>
               </div>
@@ -75,6 +77,6 @@ function UserPostsList() {
       </ul>
     </div>
   );
-}
+};
 
 export default UserPostsList;
