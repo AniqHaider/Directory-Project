@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Timezone = (props) => {
+const Clock = (props) => {
   const { countryTime, rawOffset } = props;
   const [localTime, setLocalTime] = useState("");
   const [isPaused, setIsPaused] = useState(false);
@@ -68,4 +68,4 @@ useEffect(() => {
   );
 };
 
-export default Timezone;
+export default Clock;

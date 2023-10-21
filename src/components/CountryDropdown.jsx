@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { setTimezone, setCountries } from "../api/api";
-import Timezone from "./Timezone";
+import Clock from "./Clock";
 
 const CountryDropdown = () => {
   const [countryList, setCountryList] = useState([]);
@@ -73,7 +73,7 @@ const CountryDropdown = () => {
       </select>
 
       {countryTime && rawOffset !== null && (
-        <Timezone countryTime={countryTime} rawOffset={rawOffset} />
+        <Clock countryTime={countryTime} rawOffset={rawOffset} />
       )}
     </div>
   );
